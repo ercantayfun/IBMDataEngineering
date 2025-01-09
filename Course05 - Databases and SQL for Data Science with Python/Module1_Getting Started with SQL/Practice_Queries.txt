@@ -1,0 +1,5 @@
+CREATE TABLE Toys (
+    ID INTEGER NOT NULL,
+    Variety VARCHAR(20),
+    Quantity INTEGER
+	);
