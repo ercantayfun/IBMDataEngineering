@@ -1,24 +1,121 @@
-#Question1
+###Exercise_1_Question_1
 
 SELECT PS.NAME_OF_SCHOOL,PS.COMMUNITY_AREA_NAME, PS.AVERAGE_STUDENT_ATTENDANCE
-FROM chicago_public_schools AS PS 
-LEFT JOIN chicago_socioeconomic_data AS SD
+FROM CHICAGO_PUBLIC_SCHOOLS AS PS 
+LEFT JOIN CHICAGO_SOCIOECONOMIC_DATA AS SD
 ON PS.COMMUNITY_AREA_NAME=SD.COMMUNITY_AREA_NAME
 WHERE SD.HARDSHIP_INDEX=98;
 
-#Question2
+#Exercise_1_Question_2
 
 SELECT C.CASE_NUMBER, C.PRIMARY_TYPE AS CRIME_TYPE, SD.COMMUNITY_AREA_NAME, C.LOCATION_DESCRIPTION
-FROM chicago_crime AS C
-LEFT JOIN chicago_socioeconomic_data AS SD
+FROM CHICAGO_CRIME AS C
+LEFT JOIN CHICAGO_SOCIOECONOMIC_DATA AS SD
 ON C.COMMUNITY_AREA_NUMBER=SD.COMMUNITY_AREA_NUMBER
 WHERE C.LOCATION_DESCRIPTION LIKE '%SCHOOL%';
 
-#Question3
+##################################################################################################
+
+###Exercise_2_Question_1a
+
+CREATE VIEW PS_VIEW(
+        School_Name, Safety_Rating, Family_Rating, Environment_Rating,
+        Instruction_Rating, Leaders_Rating, Teachers_Rating) 
+AS SELECT 
+	NAME_OF_SCHOOL,
+	Safety_Icon,
+    Family_Involvement_Icon,
+    Environment_Icon,
+	Instruction_Icon,
+    Leaders_Icon, 
+    Teachers_Icon
+FROM chicago_public_schools;
+
+Exercise_2_Question_1b
+SELECT * FROM PS_VIEW;
+
+Exercise_2_Question_1c
+SELECT School_Name, Leaders_Rating FROM PS_VIEW;
+
+##################################################################################################
+
+###Exercise_3_Question_1
+
+DELIMITER $$
+
+CREATE PROCEDURE UPDATE_LEADERS_SCORE (
+    in_School_ID INT,  
+    in_Leader_Score INT  
+)
+BEGIN
+    -- SQL Logic
+END $$
+
+DELIMITER ;
+
+
+###Exercise_3_Question_2
+
+DELIMITER $$
+
+CREATE PROCEDURE UPDATE_LEADERS_SCORE (
+    in_School_ID INT,
+    in_Leader_Score INT
+)
+BEGIN
+
+    UPDATE CHICAGO_PUBLIC_SCHOOLS
+    SET Leaders_Score = in_Leader_Score
+    WHERE School_ID = in_School_ID;
+END $$
+
+DELIMITER ;
+
+###Exercise_3_Question_3
+
+DELIMITER $$
+
+CREATE PROCEDURE UPDATE_LEADERS_SCORE (
+    in_School_ID INT,
+    in_Leader_Score INT
+)
+BEGIN
+
+    UPDATE CHICAGO_PUBLIC_SCHOOLS
+    SET Leaders_Score = in_Leader_Score
+    WHERE School_ID = in_School_ID;
+
+    IF in_Leader_Score >= 0 AND in_Leader_Score < 20 THEN
+        UPDATE CHICAGO_PUBLIC_SCHOOLS
+        SET Leaders_Icon = 'Very weak'
+        WHERE School_ID = in_School_ID;
+    ELSEIF in_Leader_Score >= 20 AND in_Leader_Score < 40 THEN
+        UPDATE CHICAGO_PUBLIC_SCHOOLS
+        SET Leaders_Icon = 'Weak'
+        WHERE School_ID = in_School_ID;
+    ELSEIF in_Leader_Score >= 40 AND in_Leader_Score < 60 THEN
+        UPDATE CHICAGO_PUBLIC_SCHOOLS
+        SET Leaders_Icon = 'Average'
+        WHERE School_ID = in_School_ID;
+    ELSEIF in_Leader_Score >= 60 AND in_Leader_Score < 80 THEN
+        UPDATE CHICAGO_PUBLIC_SCHOOLS
+        SET Leaders_Icon = 'Strong'
+        WHERE School_ID = in_School_ID;
+    ELSEIF in_Leader_Score >= 80 AND in_Leader_Score <= 99 THEN
+        UPDATE CHICAGO_PUBLIC_SCHOOLS
+        SET Leaders_Icon = 'Very strong'
+        WHERE School_ID = in_School_ID;
+    END IF;
+END $$
+
+DELIMITER ;
+
+
+###Exercise_3_Question_4
+CALL UPDATE_LEADERS_SCORE(610038, 85);
 
 
 
-#Question4
 
 
 
