@@ -29,9 +29,12 @@ AS SELECT
 	Instruction_Icon,
     Leaders_Icon, 
     Teachers_Icon
-FROM chicago_public_schools;
+FROM CHICAGO_PUBLIC_SCHOOLS;
+
+
 
 Exercise_2_Question_1b
+
 SELECT * FROM PS_VIEW;
 
 Exercise_2_Question_1c
@@ -54,7 +57,7 @@ END $$
 DELIMITER ;
 
 
-###Exercise_3_Question_2
+###Exercise_3_Question_2   (before executing this code; the procedure created in the first step must be dropped)
 
 DELIMITER $$
 
@@ -70,6 +73,8 @@ BEGIN
 END $$
 
 DELIMITER ;
+
+
 
 ###Exercise_3_Question_3
 
@@ -112,7 +117,9 @@ DELIMITER ;
 
 
 ###Exercise_3_Question_4
+SELECT School_ID, Leaders_Score, Leaders_Icon FROM CHICAGO_PUBLIC_SCHOOLS LIMIT 3;
 CALL UPDATE_LEADERS_SCORE(610038, 85);
+SELECT School_ID, Leaders_Score, Leaders_Icon FROM CHICAGO_PUBLIC_SCHOOLS LIMIT 3;
 
 
 
