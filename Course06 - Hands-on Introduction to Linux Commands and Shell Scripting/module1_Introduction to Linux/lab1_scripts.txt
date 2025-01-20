@@ -1,0 +1,153 @@
+theia@theia-ercantayfun1:/home/project$ ls
+theia@theia-ercantayfun1:/home/project$ ls /
+bin   dev  home  lib32  libx32  mnt  proc  run   srv  tmp  var
+boot  etc  lib   lib64  media   opt  root  sbin  sys  usr
+theia@theia-ercantayfun1:/home/project$ ls /bin
+bash          bzmore  dnsdomainname  hostname  mknod          ps          stty        which
+bunzip2       cat     domainname     kill      mktemp         pwd         su          ypdomainname
+bzcat         chgrp   echo           less      more           rbash       sync        zcat
+bzcmp         chmod   egrep          lessecho  mount          readlink    tar         zcmp
+bzdiff        chown   false          lessfile  mountpoint     rm          tempfile    zdiff
+bzegrep       cp      fgrep          lesskey   mv             rmdir       touch       zegrep
+bzexe         dash    findmnt        lesspipe  nano           rnano       true        zfgrep
+bzfgrep       date    fuser          ln        netstat        run-parts   umount      zforce
+bzgrep        dd      grep           login     nisdomainname  sed         uname       zgrep
+bzip2         df      gunzip         ls        pidof          sh          uncompress  zless
+bzip2recover  dir     gzexe          lsblk     ping           sh.distrib  vdir        zmore
+bzless        dmesg   gzip           mkdir     ping6          sleep       wdctl       znew
+theia@theia-ercantayfun1:/home/project$ ls /lib
+cpp  init  ld-linux.so.2  lsb  systemd  terminfo  udev  x86_64-linux-gnu
+theia@theia-ercantayfun1:/home/project$ ls /sbin
+acpi_available  fsck               iptables          mkfs.minix             slattach
+agetty          fsck.cramfs        iptables-restore  mkhomedir_helper       start-stop-daemon
+apm_available   fsck.ext2          iptables-save     mkswap                 sulogin
+badblocks       fsck.ext3          iptunnel          nameif                 swaplabel
+blkdiscard      fsck.ext4          isosize           on_ac_power            swapoff
+blkid           fsck.minix         killall5          pam_extrausers_chkpwd  swapon
+blockdev        fsfreeze           ldconfig          pam_extrausers_update  switch_root
+cfdisk          fstab-decode       ldconfig.real     pam_tally              sysctl
+chcpu           fstrim             logsave           pam_tally2             tune2fs
+ctrlaltdel      getty              losetup           pivot_root             unix_chkpwd
+debugfs         hwclock            mii-tool          plipconfig             unix_update
+dumpe2fs        ifconfig           mke2fs            rarp                   wipefs
+e2fsck          initctl            mkfs              raw                    xtables-multi
+e2image         installkernel      mkfs.bfs          resize2fs              zramctl
+e2label         ip6tables          mkfs.cramfs       route
+e2undo          ip6tables-restore  mkfs.ext2         runuser
+fdisk           ip6tables-save     mkfs.ext3         sfdisk
+findfs          ipmaddr            mkfs.ext4         shadowconfig
+theia@theia-ercantayfun1:/home/project$ ls / home
+ls: cannot access 'home': No such file or directory
+/:
+bin   dev  home  lib32  libx32  mnt  proc  run   srv  tmp  var
+boot  etc  lib   lib64  media   opt  root  sbin  sys  usr
+theia@theia-ercantayfun1:/home/project$ cd ~
+theia@theia-ercantayfun1:~$ pwd
+/home/theia
+theia@theia-ercantayfun1:~$ cd ..
+theia@theia-ercantayfun1:/home$ cd /
+theia@theia-ercantayfun1:/$ pwd
+/
+theia@theia-ercantayfun1:/$ cd bin
+theia@theia-ercantayfun1:/bin$ ls
+bash          bzmore  dnsdomainname  hostname  mknod          ps          stty        which
+bunzip2       cat     domainname     kill      mktemp         pwd         su          ypdomainname
+bzcat         chgrp   echo           less      more           rbash       sync        zcat
+bzcmp         chmod   egrep          lessecho  mount          readlink    tar         zcmp
+bzdiff        chown   false          lessfile  mountpoint     rm          tempfile    zdiff
+bzegrep       cp      fgrep          lesskey   mv             rmdir       touch       zegrep
+bzexe         dash    findmnt        lesspipe  nano           rnano       true        zfgrep
+bzfgrep       date    fuser          ln        netstat        run-parts   umount      zforce
+bzgrep        dd      grep           login     nisdomainname  sed         uname       zgrep
+bzip2         df      gunzip         ls        pidof          sh          uncompress  zless
+bzip2recover  dir     gzexe          lsblk     ping           sh.distrib  vdir        zmore
+bzless        dmesg   gzip           mkdir     ping6          sleep       wdctl       znew
+theia@theia-ercantayfun1:/bin$ cd ..
+theia@theia-ercantayfun1:/$ cd ./bin
+theia@theia-ercantayfun1:/bin$ cd ./bin
+bash: cd: ./bin: No such file or directory
+theia@theia-ercantayfun1:/bin$ cd ../home/theia
+theia@theia-ercantayfun1:~$ pwd
+/home/theia
+theia@theia-ercantayfun1:~$ cd ../project
+theia@theia-ercantayfun1:/home/project$ pwd
+/home/project
+theia@theia-ercantayfun1:/home/project$ cd /
+theia@theia-ercantayfun1:/$ ls
+bin   dev  home  lib32  libx32  mnt  proc  run   srv  tmp  var
+boot  etc  lib   lib64  media   opt  root  sbin  sys  usr
+theia@theia-ercantayfun1:/$ cd /bin/
+theia@theia-ercantayfun1:/bin$ cd .. 
+theia@theia-ercantayfun1:/$ cd b
+bin/  boot/ 
+theia@theia-ercantayfun1:/$ cd /b
+bin/  boot/ 
+theia@theia-ercantayfun1:/$ cd /bin/
+theia@theia-ercantayfun1:/bin$ ls
+bash          bzmore  dnsdomainname  hostname  mknod          ps          stty        which
+bunzip2       cat     domainname     kill      mktemp         pwd         su          ypdomainname
+bzcat         chgrp   echo           less      more           rbash       sync        zcat
+bzcmp         chmod   egrep          lessecho  mount          readlink    tar         zcmp
+bzdiff        chown   false          lessfile  mountpoint     rm          tempfile    zdiff
+bzegrep       cp      fgrep          lesskey   mv             rmdir       touch       zegrep
+bzexe         dash    findmnt        lesspipe  nano           rnano       true        zfgrep
+bzfgrep       date    fuser          ln        netstat        run-parts   umount      zforce
+bzgrep        dd      grep           login     nisdomainname  sed         uname       zgrep
+bzip2         df      gunzip         ls        pidof          sh          uncompress  zless
+bzip2recover  dir     gzexe          lsblk     ping           sh.distrib  vdir        zmore
+bzless        dmesg   gzip           mkdir     ping6          sleep       wdctl       znew
+theia@theia-ercantayfun1:/bin$ ls /home
+project  theia
+theia@theia-ercantayfun1:/bin$ ls/home
+bash: ls/home: Not a directory
+theia@theia-ercantayfun1:/bin$ ls /home/
+project/ theia/   
+theia@theia-ercantayfun1:/bin$ ls /home/
+project/ theia/   
+theia@theia-ercantayfun1:/bin$ ls /home/
+project/ theia/   
+theia@theia-ercantayfun1:/bin$ ls /home/
+project/ theia/   
+theia@theia-ercantayfun1:/bin$ ls /home/
+project/ theia/   
+theia@theia-ercantayfun1:/bin$ cd home
+bash: cd: home: No such file or directory
+theia@theia-ercantayfun1:/bin$ cd /home
+theia@theia-ercantayfun1:/home$ ls
+project  theia
+theia@theia-ercantayfun1:/home$ ls /home/
+project  theia
+theia@theia-ercantayfun1:/home$ pws
+bash: pws: command not found
+theia@theia-ercantayfun1:/home$ pwd
+/home
+theia@theia-ercantayfun1:/home$ cd /
+theia@theia-ercantayfun1:/$ pws
+bash: pws: command not found
+theia@theia-ercantayfun1:/$ pwd
+/
+theia@theia-ercantayfun1:/$ ls
+bin   dev  home  lib32  libx32  mnt  proc  run   srv  tmp  var
+boot  etc  lib   lib64  media   opt  root  sbin  sys  usr
+theia@theia-ercantayfun1:/$ cd ~
+theia@theia-ercantayfun1:~$ pwd
+/home/theia
+theia@theia-ercantayfun1:~$ ls
+docker-compose         javasharedresources  plugins                              src-gen
+dsdriver               lib                  postgres                             webpack.config.js
+entrypoint.sh          node_modules         README.md                            yarn.lock
+gen-webpack.config.js  package.json         skills-network-extension-v0.1.0.tgz
+theia@theia-ercantayfun1:~$ cd ..
+theia@theia-ercantayfun1:/home$ ls
+project  theia
+theia@theia-ercantayfun1:/home$ cd ..
+theia@theia-ercantayfun1:/$ ls
+bin   dev  home  lib32  libx32  mnt  proc  run   srv  tmp  var
+boot  etc  lib   lib64  media   opt  root  sbin  sys  usr
+theia@theia-ercantayfun1:/$ cd /b
+bin/  boot/ 
+theia@theia-ercantayfun1:/$ cd /bin/
+theia@theia-ercantayfun1:/bin$ cd ~
+theia@theia-ercantayfun1:~$ pwd
+/home/theia
+theia@theia-ercantayfun1:~$ 
