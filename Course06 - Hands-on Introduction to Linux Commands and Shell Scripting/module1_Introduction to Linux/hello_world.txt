@@ -1,0 +1,3 @@
+Hello world!
+This is the second line of my first-ever text file created with nano.
+This is line three of my new file.
