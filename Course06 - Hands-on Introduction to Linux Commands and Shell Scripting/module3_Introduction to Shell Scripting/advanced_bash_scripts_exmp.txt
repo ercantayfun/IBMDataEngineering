@@ -1,0 +1,110 @@
+if [ condition ]
+then
+    statement_block_1  
+else
+    statement_block_2  
+fi
+
+
+
+
+if [[ $# == 2 ]]
+then
+  echo "number of arguments is equal to 2"
+else
+  echo "number of arguments is not equal to 2"
+fi
+
+
+
+
+if [ condition1 ] && [ condition2 ]
+then
+    echo "conditions 1 and 2 are both true"
+else
+    echo "one or both conditions are false"
+fi
+
+
+
+
+if [ condition1 ] || [ condition2 ]
+then
+    echo "conditions 1 or 2 are true"
+else
+    echo "both conditions are false"
+fi
+
+
+
+
+
+a=1
+b=2
+if [ $a -le $b ]
+then
+   echo "a is less than or equal to b"
+else
+   echo "a is not less than or equal to b"
+fi
+
+
+
+
+a=3
+b=2
+c=$(($a+$b))
+echo $c
+
+
+
+
+# print the first item of the array:
+echo ${my_array[0]}
+
+# print the third item of the array:
+echo ${my_array[2]}
+
+# print all array elements:
+echo ${my_array[@]}
+
+
+
+
+
+
+for item in ${my_array[@]}; do
+  echo $item
+done
+
+
+
+
+
+N=6
+for (( i=0; i<=$N; i++ )) ; do
+  echo $i
+done
+
+
+
+
+
+
+
+
+#!/usr/bin/env bash
+# initialize array, count, and sum
+my_array=(1 2 3)
+count=0
+sum=0
+for i in ${!my_array[@]}; do
+  # print the ith array element
+  echo ${my_array[$i]}
+  # increment the count by one
+  count=$(($count+1))
+  # add the current value of the array to the sum
+  sum=$(($sum+${my_array[$i]}))
+done
+echo $count
+echo $sum
