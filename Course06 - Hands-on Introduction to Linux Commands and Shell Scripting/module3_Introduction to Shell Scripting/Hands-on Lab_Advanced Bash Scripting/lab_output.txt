@@ -1,0 +1,31 @@
+theia@theia-ercantayfun1:/home/project$ pwd
+/home/project
+theia@theia-ercantayfun1:/home/project$ echo '#!/bin/bash' > conditional_script.sh
+chmod u+x conditional_script.sh
+theia@theia-ercantayfun1:/home/project$ #!/bin/bash
+theia@theia-ercantayfun1:/home/project$ 
+theia@theia-ercantayfun1:/home/project$ echo 'Are you enjoying this course so far?'
+Are you enjoying this course so far?
+theia@theia-ercantayfun1:/home/project$ echo -n "Enter \"y\" for yes, \"n\" for no."
+Enter "y" for yes, "n" for no.theia@theia-ercantayfun1:/home/project$ read response
+y
+theia@theia-ercantayfun1:/home/project$ read response
+            
+theia@theia-ercantayfun1:/home/project$ #!/bin/bash
+theia@theia-ercantayfun1:/home/project$ ./conditional_script.sh 
+Are you enjoying this course so far?
+Enter "y" for yes, "n" for noy
+I'm pleased to hear you are enjoying the course!
+Your feedback regarding what you have been enjoying would be most welcome!
+theia@theia-ercantayfun1:/home/project$ ./conditional_script.sh 
+Are you enjoying this course so far?
+Enter "y" for yes, "n" for non
+I'm sorry to hear you are not enjoying the course.
+Your feedback regarding what we can do to improve the learning experience
+for this course would be greatly appreciated!
+theia@theia-ercantayfun1:/home/project$ ./conditional_script.sh 
+Are you enjoying this course so far?
+Enter "y" for yes, "n" for noX
+Your response must be either 'y' or 'n'.
+Please re-run the script to try again.
+theia@theia-ercantayfun1:/home/project$ 
