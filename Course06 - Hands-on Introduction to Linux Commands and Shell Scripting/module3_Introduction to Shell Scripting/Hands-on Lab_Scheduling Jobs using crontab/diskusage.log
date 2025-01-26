@@ -1,0 +1,22 @@
+Sun Jan 26 08:41:01 EST 2025
+Filesystem      Size  Used Avail Use% Mounted on
+overlay          98G   51G   43G  55% /
+tmpfs            64M     0   64M   0% /dev
+tmpfs            16G     0   16G   0% /sys/fs/cgroup
+/dev/vda2        98G   51G   43G  55% /etc/hosts
+shm              64M     0   64M   0% /dev/shm
+tmpfs            28G   16K   28G   1% /run/secrets/kubernetes.io/serviceaccount
+tmpfs            16G     0   16G   0% /proc/acpi
+tmpfs            16G     0   16G   0% /proc/scsi
+tmpfs            16G     0   16G   0% /sys/firmware
+Sun Jan 26 08:42:01 EST 2025
+Filesystem      Size  Used Avail Use% Mounted on
+overlay          98G   51G   43G  55% /
+tmpfs            64M     0   64M   0% /dev
+tmpfs            16G     0   16G   0% /sys/fs/cgroup
+/dev/vda2        98G   51G   43G  55% /etc/hosts
+shm              64M     0   64M   0% /dev/shm
+tmpfs            28G   16K   28G   1% /run/secrets/kubernetes.io/serviceaccount
+tmpfs            16G     0   16G   0% /proc/acpi
+tmpfs            16G     0   16G   0% /proc/scsi
+tmpfs            16G     0   16G   0% /sys/firmware
