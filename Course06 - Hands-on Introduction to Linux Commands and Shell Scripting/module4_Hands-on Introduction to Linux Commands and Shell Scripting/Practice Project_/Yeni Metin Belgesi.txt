@@ -1,0 +1,30 @@
+touch rx_poc.log
+
+echo -e "year\tmonth\tday\tobs_temp\tfc_temp">rx_poc.log
+
+touch rx_poc.sh
+
+echo '#! /bin/bash'>rx_poc.sh
+
+chmod u+x rx_poc.sh
+
+city=Casablanca
+
+curl -s wttr.in/$city?T --output weather_report
+
+echo "Weather Log Initialized on $(date)" > weather_log.txt
+
+date
+date -u
+
+crontab -e
+0 8 * * * /home/project/rx_poc.sh
+
+echo -e "year\tmonth\tday\tobs_temp\tfc_temp\taccuracy\taccuracy_range" > historical_fc_accuracy.tsv
+
+touch fc_accuracy.sh
+chmod u+x fc_accuracy.sh
+
+echo '#! /bin/bash'>weekly_stats.sh    
+
+wget https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMSkillsNetwork-LX0117EN-Coursera/labs/synthetic_historical_fc_accuracy.tsv
