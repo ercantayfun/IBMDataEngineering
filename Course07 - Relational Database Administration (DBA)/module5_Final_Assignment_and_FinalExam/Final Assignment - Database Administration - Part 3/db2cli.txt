@@ -1,0 +1,1 @@
+db2cli execsql -connString "DATABASE=<your_database>;UID=<your_username>;PWD=<your_password>;HOSTNAME=<your_hostname>;port=<your_port>;Security=SSL"
