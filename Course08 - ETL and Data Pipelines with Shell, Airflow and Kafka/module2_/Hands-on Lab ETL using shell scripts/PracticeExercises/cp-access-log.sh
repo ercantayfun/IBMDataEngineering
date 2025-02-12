@@ -34,8 +34,11 @@ tr "#" "," < extracted-data.txt > transformed-data.csv
 
 # Load phase
 echo "Loading data"
-#export PGPASSWORD=pjzfYFgjN7jM4EoyvGHuTmid;
+export PGPASSWORD=pjzfYFgjN7jM4EoyvGHuTmid;
 # Send the instructions to connect to 'template1' and
 # copy the file to the table 'access_log' through command pipeline.
 
-echo "\c template1;\COPY access_log  FROM '/home/project/transformed-data.csv' DELIMITERS ',' CSV HEADER;" | psql --username=postgres --host=localhost
+echo "\c template1;\COPY access_log FROM '/home/project/transformed-data.csv' DELIMITERS ',' CSV HEADER;" | psql --username=postgres --host=postgres
+
+
+echo "SELECT * FROM users;" | psql --username=postgres --host=postgres template1
