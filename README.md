@@ -31,14 +31,14 @@ There are 16 Courses in this Professional Certificate
 
 | Sr. No | Course                                                               |Status|
 |:------:|----------------------------------------------------------------------------|:--:|
-| 01.     | [Introduction to Data Engineering](.//tree/719d94d33aecd3aa808ff313af3b63bf866162f8/Course%2001%20-%20Introduction%20to%20Data%20Engineering)|✅|
+| 01.     | [Introduction to Data Engineering](./tree/719d94d33aecd3aa808ff313af3b63bf866162f8/Course%2001%20-%20Introduction%20to%20Data%20Engineering)|✅|
 | 02.     | [Python for Data Science, AI & Development]()|✅| 
 | 03.     | [Python Project for Data Engineering]()|✅|
-| 04.     | [Introduction to Relational Databases (RDBMS)]|⏳|
-| 05.     | [Databases and SQL for Data Science with Python]|⏳| 
-| 06.     | [Hands-on Introduction to Linux Commands and Shell Scripting]|⏳|
-| 07.     | [Relational Database Administration (DBA)]|⏳|
-| 08.     | [ETL and Data Pipelines with Shell, Airflow and Kafka]|⏳|
+| 04.     | [Introduction to Relational Databases (RDBMS)]|✅|
+| 05.     | [Databases and SQL for Data Science with Python]|✅| 
+| 06.     | [Hands-on Introduction to Linux Commands and Shell Scripting]|✅|
+| 07.     | [Relational Database Administration (DBA)]|✅|
+| 08.     | [ETL and Data Pipelines with Shell, Airflow and Kafka]|✅|
 | 09.     | [Data Warehouse Fundamentals]|⏳|
 | 10.     | [BI Dashboards with IBM Cognos Analytics and Google Looker]|⏳|
 | 11.     | [Introduction to NoSQL Databases]|⏳|
@@ -54,6 +54,6 @@ There are 16 Courses in this Professional Certificate
 
 Ercan Tayfun - ercantayfun1@gmail.com
 
-Project Link: [https://github.com/ercantayfun/IBMDataEngineering](https://www.linkedin.com/in/e-tayfun/)
+Project Link: [https://www.linkedin.com/in/e-tayfun/](https://github.com/ercantayfun/IBMDataEngineering)
 
 Linkedin: [https://www.linkedin.com/in/e-tayfun/](https://www.linkedin.com/in/e-tayfun/)
