@@ -36,17 +36,20 @@ extract_data_from_csv = BashOperator(
     dag=dag,
 )
 
-# Task3: Extract data from  tollplaza-data.tsv
+# Task3: Extract data from tollplaza-data.tsv
 extract_data_from_tsv = BashOperator(
     task_id='extract_data_from_tsv',
-    bash_command='tr "\t" "," < /home/project/airflow/dags/finalassignment/tollplaza-data.tsv | cut -d"," -f5-7 > /home/project/airflow/dags/finalassignment/tsv_data.csv',
+    bash_command="cut -f5-7 /home/project/airflow/dags/finalassignment/tollplaza-data.tsv | tr '\t' ',' | sed 's/,$//' > /home/project/airflow/dags/finalassignment/tsv_data.csv",
     dag=dag,
 )
 
 # Task4: Extract data from payment-data.txt
 extract_data_from_fixed_width = BashOperator(
     task_id='extract_data_from_fixed_width',
-    bash_command='awk \'{print $10 "," $11}\' /home/project/airflow/dags/finalassignment/payment-data.txt > /home/project/airflow/dags/finalassignment/fixed_width_data.csv',
+    bash_command=(
+        'cut -c59-61,62-67 /home/project/airflow/dags/finalassignment/payment-data.txt | '
+        'tr " " "," > /home/project/airflow/dags/finalassignment/fixed_width_data.csv'
+    ),
     dag=dag,
 )
 
@@ -70,13 +73,5 @@ transform_data = BashOperator(
     dag=dag,
 )
 
-
-# Task7: Load the data (move the transformed file to final directory)
-load_data = BashOperator(
-    task_id='load_data',
-    bash_command='mv /home/project/airflow/dags/finalassignment/transformed_data.csv /home/project/airflow/dags/finalassignment/final_data.csv',
-    dag=dag,
-)
-
 # Define task dependencies
-unzip_data >> [extract_data_from_csv, extract_data_from_tsv, extract_data_from_fixed_width] >> consolidate_data >> transform_data >> load_data
+unzip_data >> extract_data_from_csv >> extract_data_from_tsv >> extract_data_from_fixed_width >> consolidate_data >> transform_data
