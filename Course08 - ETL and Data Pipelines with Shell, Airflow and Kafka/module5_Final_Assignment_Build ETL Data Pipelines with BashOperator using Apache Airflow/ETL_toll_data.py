@@ -69,7 +69,7 @@ consolidate_data = BashOperator(
 # Task6: Transform the data (convert vehicle_type to uppercase)
 transform_data = BashOperator(
     task_id='transform_data',
-    bash_command="""awk 'BEGIN {OFS=\",\"} {$4=toupper($4); print}' /home/project/airflow/dags/finalassignment/extracted_data.csv > /home/project/airflow/dags/finalassignment/transformed_data.csv""",
+    bash_command="""awk -F',' '{ $4 = toupper($4); print $0 }' OFS=',' /home/project/airflow/dags/finalassignment/extracted_data.csv > /home/project/airflow/dags/finalassignment/transformed_data.csv""",
     dag=dag,
 )
 
