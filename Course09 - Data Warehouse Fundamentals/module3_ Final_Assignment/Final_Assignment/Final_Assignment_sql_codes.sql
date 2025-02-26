@@ -135,3 +135,15 @@ FROM
 LEFT JOIN dimstation AS s ON f.station_id=s.station_id
 LEFT JOIN dimdate AS d ON f.date_id=d.date_id
 GROUP BY ROLLUP(f.station_id, city, year);
+
+#15
+
+SELECT d.year,
+	   s.city,
+	   s.station_id,
+	   AVG(f.waste_collected) AS average_waste
+FROM
+	facttrips f
+LEFT JOIN dimdate AS d ON f.date_id=d.date_id
+LEFT JOIN dimstation AS s ON f.station_id=s.station_id
+GROUP BY CUBE(year, city, s.station_id);
