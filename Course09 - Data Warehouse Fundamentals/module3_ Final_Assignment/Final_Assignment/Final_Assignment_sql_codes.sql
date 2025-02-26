@@ -147,3 +147,17 @@ FROM
 LEFT JOIN dimdate AS d ON f.date_id=d.date_id
 LEFT JOIN dimstation AS s ON f.station_id=s.station_id
 GROUP BY CUBE(year, city, s.station_id);
+
+#16
+
+CREATE MATERIALIZED VIEW max_waste_stats AS
+(SELECT city, f.station_id, truck_type, MAX(f.waste_collected) AS total_waste_collected
+FROM
+	facttrips f
+LEFT JOIN dimstation AS s ON f.station_id=s.station_id
+LEFT JOIN dimtruck AS t ON f.truck_id=t.truck_id
+GROUP BY
+    city,
+    f.station_id,
+    truck_type)
+ORDER BY total_waste_collected DESC, station_id ASC;
