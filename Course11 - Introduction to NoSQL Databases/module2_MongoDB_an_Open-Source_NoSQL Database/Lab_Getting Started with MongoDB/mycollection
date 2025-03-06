@@ -1,0 +1,5 @@
+{"_id":{"$oid":"67c9be75057d707d9c51e944"},"color":"white","example":"milk"}
+{"_id":{"$oid":"67c9be81057d707d9c51e945"},"color":"blue","example":"sky"}
+{"_id":{"$oid":"67c9bed6057d707d9c51e946"},"color":"red","example":"rose"}
+{"_id":{"$oid":"67c9beed057d707d9c51e947"},"color":"black","example":"spider"}
+{"_id":{"$oid":"67c9bf0a057d707d9c51e948"},"color":"green","example":"leaf"}

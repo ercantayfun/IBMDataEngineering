@@ -1,0 +1,5 @@
+{"_id":{"$oid":"67c9c0e63e2333933751e944"},"name":"Statue of Liberty","city":"New York","country":"USA"}
+{"_id":{"$oid":"67c9c0e63e2333933751e945"},"name":"Big Ben","city":"London","country":"UK"}
+{"_id":{"$oid":"67c9c0e63e2333933751e946"},"name":"Taj Mahal","city":"Agra","country":"India"}
+{"_id":{"$oid":"67c9c0e63e2333933751e947"},"name":"Pyramids","country":"Egypt"}
+{"_id":{"$oid":"67c9c0e63e2333933751e948"},"name":"Great Wall of China","country":"China"}
