@@ -1,0 +1,43 @@
+#1
+db.marks.aggregate([
+    {
+        "$group":{"_id":"$name","total":{"$sum":"$marks"}}
+    }
+])
+
+
+
+#2
+db.marks.aggregate([
+    {
+        "$group":{"_id":"$subject","max_marks":{"$max":"$marks"}}
+    }
+])
+
+
+
+#3
+db.marks.aggregate([
+    {
+        "$group":{"_id":"$name","min_marks":{"$min":"$marks"}}
+    }
+])
+
+
+
+
+#4
+db.marks.aggregate([
+{
+    "$group":{
+        "_id":"$subject",
+        "average":{"$avg":"$marks"}
+        }
+},
+{
+    "$sort":{"average":-1}
+},
+{
+    "$limit":2
+}
+])
