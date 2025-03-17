@@ -39,9 +39,9 @@ There are 16 Courses in this Professional Certificate
 | 06.     | [Hands-on Introduction to Linux Commands and Shell Scripting]|✅|
 | 07.     | [Relational Database Administration (DBA)]|✅|
 | 08.     | [ETL and Data Pipelines with Shell, Airflow and Kafka]|✅|
-| 09.     | [Data Warehouse Fundamentals]|⏳|
-| 10.     | [BI Dashboards with IBM Cognos Analytics and Google Looker]|⏳|
-| 11.     | [Introduction to NoSQL Databases]|⏳|
+| 09.     | [Data Warehouse Fundamentals]|✅|
+| 10.     | [BI Dashboards with IBM Cognos Analytics and Google Looker]|✅|
+| 11.     | [Introduction to NoSQL Databases]|✅|
 | 12.     | [Introduction to Big Data with Spark and Hadoop]|⏳|
 | 13.     | [Machine Learning using Spark]|⏳|
 | 14.     | [Data Engineering Capstone Project]|⏳|
