@@ -42,8 +42,8 @@ There are 16 Courses in this Professional Certificate
 | 09.     | [Data Warehouse Fundamentals]|✅|
 | 10.     | [BI Dashboards with IBM Cognos Analytics and Google Looker]|✅|
 | 11.     | [Introduction to NoSQL Databases]|✅|
-| 12.     | [Introduction to Big Data with Spark and Hadoop]|⏳|
-| 13.     | [Machine Learning using Spark]|⏳|
+| 12.     | [Introduction to Big Data with Spark and Hadoop]|✅|
+| 13.     | [Machine Learning using Spark]|✅|
 | 14.     | [Data Engineering Capstone Project]|⏳|
 | 15.     | [Generative AI: Elevate your Data Engineering Career]|⏳|
 | 16.     | [Data Engineering Career Guide and Interview Preparation]|⏳|
