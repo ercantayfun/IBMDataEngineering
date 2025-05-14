@@ -1,0 +1,35 @@
+#5
+
+SELECT 
+    dc.country, 
+    dcat.category, 
+    SUM(fs.amount) AS total_sales
+FROM 
+    "FactSales" fs
+JOIN "DimCountry" dc ON fs.countryid = dc.countryid
+JOIN "DimCategory" dcat ON fs.categoryid = dcat.categoryid
+GROUP BY GROUPING SETS (
+    (dc.country, dcat.category),
+    (dc.country),
+    (dcat.category),
+    ()
+)
+ORDER BY dc.country, dcat.category;
+
+
+#6
+
+SELECT 
+    dd.Year, 
+    dc.country, 
+    SUM(fs.amount) AS total_sales
+FROM 
+    "FactSales" fs
+JOIN "DimDate" dd ON fs.dateid = dd.dateid
+JOIN "DimCountry" dc ON fs.countryid = dc.countryid
+GROUP BY ROLLUP (dd.Year, dc.country)
+ORDER BY total_sales DESC, dd.Year, dc.country;
+
+
+#7
+
