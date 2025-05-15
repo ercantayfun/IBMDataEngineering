@@ -14,7 +14,7 @@ GROUP BY GROUPING SETS (
     (dcat.category),
     ()
 )
-ORDER BY dc.country, dcat.category;
+ORDER BY total_sales DESC, dc.country, dcat.category;
 
 
 #6
@@ -28,8 +28,33 @@ FROM
 JOIN "DimDate" dd ON fs.dateid = dd.dateid
 JOIN "DimCountry" dc ON fs.countryid = dc.countryid
 GROUP BY ROLLUP (dd.Year, dc.country)
-ORDER BY total_sales DESC, dd.Year, dc.country;
+ORDER BY total_sales DESC,dc.country dd.Year;
 
 
 #7
+
+SELECT 
+    dd.Year, 
+    dc.country, 
+    AVG(fs.amount) AS average_sales
+FROM 
+    "FactSales" fs
+JOIN "DimDate" dd ON fs.dateid = dd.dateid
+JOIN "DimCountry" dc ON fs.countryid = dc.countryid
+GROUP BY CUBE (dd.Year, dc.country)
+ORDER BY dd.Year, dc.country;
+
+#8
+
+CREATE MATERIALIZED VIEW total_sales_per_country AS
+SELECT 
+    dc.country, 
+    SUM(fs.amount) AS total_sales
+FROM 
+    "FactSales" fs
+JOIN "DimCountry" dc ON fs.countryid = dc.countryid
+GROUP BY dc.country;
+
+SELECT * FROM total_sales_per_country;
+
 
