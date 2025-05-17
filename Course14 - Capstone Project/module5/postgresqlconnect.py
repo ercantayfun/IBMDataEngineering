@@ -6,9 +6,9 @@ import psycopg2
 
 # connectction details
 
-dsn_hostname = '172.21.20.96'
+dsn_hostname = '172.21.25.242'
 dsn_user='postgres'        # e.g. "abc12345"
-dsn_pwd ='rTzfgaJSBSXihEPbNoyLwTzT'      # e.g. "7dBZ3wWt9XN6$o0J"
+dsn_pwd ='2zV8PMl2d24GAquyXa2amRRl'      # e.g. "7dBZ3wWt9XN6$o0J"
 dsn_port ="5432"                # e.g. "50000" 
 dsn_database ="postgres"           # i.e. "BLUDB"
 
